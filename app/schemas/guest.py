@@ -3,10 +3,13 @@ from pydantic import BaseModel
 class GuestCreate(BaseModel):
     name: str
     isAttending: bool
-    email: str
+    bus: str
+    companionName: str
     allergies: str
     songRequests: str
     children: str
+    childrenNames: list
+    childrenAges: list
     tomorrowland: bool
 
 class GuestOut(GuestCreate):
