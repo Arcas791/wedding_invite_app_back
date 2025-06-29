@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from datetime import datetime
 
 class GuestCreate(BaseModel):
     name: str
@@ -11,6 +12,7 @@ class GuestCreate(BaseModel):
     childrenNames: list
     childrenAges: list
     tomorrowland: bool
+    createdAt: datetime
 
 class GuestOut(GuestCreate):
     id: int

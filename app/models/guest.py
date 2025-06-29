@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, Text
+from sqlalchemy import Column, Integer, String, Boolean, Text, DateTime
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.types import TypeDecorator
 import json
@@ -28,3 +28,4 @@ class Guest(Base):
     childrenNames = Column(StringList, nullable=True)
     childrenAges = Column(StringList, nullable=True)
     tomorrowland = Column(Boolean, nullable=False, default=False)
+    createdAt = Column(DateTime, nullable=True)
